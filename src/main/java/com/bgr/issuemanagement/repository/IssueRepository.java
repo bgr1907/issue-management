@@ -1,5 +1,6 @@
 package com.bgr.issuemanagement.repository;
 
+
 import com.bgr.issuemanagement.entity.Issue;
 import org.springframework.data.jpa.repository.JpaRepository;
 
