@@ -12,12 +12,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping(ApiPaths.ProjectCtrl.CTRL)
 @Api(value = ApiPaths.ProjectCtrl.CTRL, description = "Project APIs")
 @Slf4j
-@CrossOrigin(origins="http://localhost:8000/")
+@CrossOrigin
 public class ProjectController {
 
     private final ProjectServiceImpl projectServiceImpl;
@@ -32,9 +33,18 @@ public class ProjectController {
         TPage<ProjectDto> data = projectServiceImpl.getAllPageable(pageable);
         return ResponseEntity.ok(data);
     }
+
+    @GetMapping()
+    @ApiOperation(value = "Get All Operation", response = ProjectDto.class , responseContainer = "List")
+    public ResponseEntity<List<ProjectDto>> getAll() {
+        List<ProjectDto> data = projectServiceImpl.getAll();
+        return ResponseEntity.ok(data);
+    }
+
+
     @GetMapping("/{id}")
     @ApiOperation(value = "Get By Id Operation",response = ProjectDto.class)
-    public ResponseEntity<ProjectDto> getAllById(@PathVariable(value = "id", required = true) Long id){
+    public ResponseEntity<ProjectDto> getById(@PathVariable(value = "id", required = true) Long id){
         log.info("ProjectController -> Get By ID");
         log.debug("ProjectController -> Get By ID -> PARAM:" +id);
 
