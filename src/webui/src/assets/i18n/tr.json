@@ -1,4 +1,6 @@
 {
   "Dashboard" : "Anasayfa",
-  "Project List" : "Proje Listesi"
+  "Project List" : "Proje Listesi",
+  "New" : "Yeni",
+  "Project Code is required" : "Proje Kodu Boş Geçilemez."
 }

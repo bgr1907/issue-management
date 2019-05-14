@@ -39,7 +39,7 @@ export class ProjectService{
   }
 
   createProject(project): Observable<any>{
-    return this.apiService.post(this.PROJECT_PATH).pipe(map(
+    return this.apiService.post(this.PROJECT_PATH,project).pipe(map(
       res =>{
         if(res){
           return res;
