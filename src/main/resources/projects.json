@@ -10,8 +10,15 @@
      "projectName" : "ERP Project for Sales"
    },
    {
-     "_class" : "com.bgr.issuemanagement.entity.Project",
-     "projectCode" : "CRM-S",
-     "projectName" : "CRM Project for Sales"
+     "_class" : "com.bgr.issuemanagement.entity.User",
+     "username" : "temelt",
+     "nameSurname" : "Taner Temel",
+     "email" : "abc@gmail.com"
+   },
+   {
+     "_class" : "com.bgr.issuemanagement.entity.User",
+     "username" : "bgr",
+     "nameSurname" : "Ahmet Buğra Karabacak",
+     "email" : "abc1@gmail.com"
    }
  ]
